@@ -1,0 +1,3 @@
+[remote "upstream"]
+	url = https://github.com/terraform-google-modules/terraform-google-sap.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
