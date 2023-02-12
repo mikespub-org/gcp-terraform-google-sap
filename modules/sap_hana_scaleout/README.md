@@ -10,7 +10,7 @@ Basic usage of this module is as follows:
 ```hcl
 module "hana_scaleout" {
   source  = "terraform-google-modules/sap/google//modules/sap_hana_scaleout"
-  version = "~> 1.0"
+  version = "~> 1.1"
 
   project_id          = "PROJECT_ID"          # example: my-project-x
   zone                = "ZONE"                # example: us-east1-b
@@ -26,7 +26,7 @@ module "hana_scaleout" {
 ```
 
 Functional example is included in the
-[examples](./examples/sap_hana_scaleout) directory.
+[examples](../../examples/sap_hana_scaleout) directory.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
@@ -48,7 +48,6 @@ Functional example is included in the
 | sap\_hana\_backup\_nfs | Google Filestore share for /hanabackup | `string` | n/a | yes |
 | sap\_hana\_deployment\_bucket | The GCS bucket containing the SAP HANA media. If this is not defined, the GCE instance will be provisioned without SAP HANA installed. | `string` | `""` | no |
 | sap\_hana\_instance\_number | The SAP instance number. If this is not defined, the GCE instance will be provisioned without SAP HANA installed. | `number` | `0` | no |
-| sap\_hana\_sapsys\_gid | The Linux GID of the SAPSYS group. By default this is set to 79 | `number` | `79` | no |
 | sap\_hana\_shared\_nfs | Google Filestore share for /hana/shared | `string` | n/a | yes |
 | sap\_hana\_sid | The SAP HANA SID. SID must adhere to SAP standard (Three letters or numbers and start with a letter) | `string` | n/a | yes |
 | sap\_hana\_sidadm\_password | The linux sidadm login password. If this is not defined, the GCE instance will be provisioned without SAP HANA installed. Minimum requirement is 8 characters. | `string` | `""` | no |
